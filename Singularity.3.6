@@ -1,0 +1,55 @@
+Bootstrap: shub
+From: ellisjj/r:3.4.4
+
+%labels
+    AUTHOR jonathan.j.ellis@gmail.com
+    VERSION 1.0
+
+%post
+R --slave -e "source('https://bioconductor.org/biocLite.R'); \
+              biocLite(c( \
+                'affy', \
+                'affyio', \
+                'AnnotationDbi', \
+                'AnnotationForge', \
+                'AnnotationHub', \
+                'BayesPeak', \
+                'baySeq', \
+                'biomaRt', \
+                'Biostrings', \
+                'BSgenome', \
+                'BSgenome.Hsapiens.1000genomes.hs37d5', \
+                'bumphunter', \
+                'caTools', \
+                'ComplexHeatmap', \
+                'copynumber', \
+                'DEoptimR', \
+                'DESeq2', \
+                'DNAcopy', \
+                'edgeR', \
+                'exomeCopy', \
+                'FDb.InfiniumMethylation.hg19', \
+                'GenomeInfoDb', \
+                'GenomeInfoDbData', \
+                'GenomicAlignments', \
+                'GenomicFeatures', \
+                'GenomicRanges', \
+                'GEOquery', \
+                'HardyWeinberg', \
+                'illuminaio', \
+                'IRanges', \
+                'limma', \
+                'lumi', \
+                'maftools', \
+                'methylumi', \
+                'minfi', \
+                'org.Hs.eg.db', \
+                'Rsamtools', \
+                'rtracklayer', \
+                'sequenza', \
+                'ShortRead', \
+                'SummarizedExperiment', \
+                'survival', \
+                'TxDb.Hsapiens.UCSC.hg19.knownGene', \
+                'tximport', \
+                'VariantAnnotation'))"
